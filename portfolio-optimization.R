@@ -5,7 +5,7 @@ setwd(diretorioquote);
 
 f = NULL
 files = 
-  c("ABEV3.SA.csv","B3SA3.SA.csv","BBAS3.SA.csv")
+  c("ABEV3.SA.csv","B3SA3.SA.csv","BBAS3.SA.csv","BBDC3.SA.csv","BBDC4.SA.csv","BBSE3.SA.csv","BRAP4.SA.csv","BRFS3.SA.csv","BRKM5.SA.csv","BRML3.SA.csv","BTOW3.SA.csv","CCRO3.SA.csv","CIEL3.SA.csv","CMIG4.SA.csv","CSAN3.SA.csv","CSNA3.SA.csv","ELET3.SA.csv","ELET6.SA.csv","EMBR3.SA.csv","ESTC3.SA.csv","GGBR4.SA.csv","GOAU4.SA.csv","GOLL4.SA.csv","ITSA4.SA.csv","ITUB4.SA.csv","JBSS3.SA.csv","KROT3.SA.csv","LAME4.SA.csv","LREN3.SA.csv","MGLU3.SA.csv","MULT3.SA.csv","NATU3.SA.csv","PCAR4.SA.csv","PETR3.SA.csv","PETR4.SA.csv","RADL3.SA.csv","RAIL3.SA.csv","RENT3.SA.csv","SANB11.SA.csv","SBSP3.SA.csv","TIMP3.SA.csv","UGPA3.SA.csv","USIM5.SA.csv","VALE3.SA.csv","VIVT4.SA.csv","VVAR3.SA.csv","WEGE3.SA.csv")
 
 for (i in 1:length(files)) {
   csv = read.csv(files[i])
