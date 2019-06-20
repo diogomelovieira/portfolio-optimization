@@ -48,4 +48,26 @@ portfolio_returns = function(x) {
   return (port.returns)
 }
 
+#Funçãoo objetiva e a penalidade (sharp ratio x restrição)
+
+sharpe = function(x) {
+  port.returns = portfolio_returns(x)
+  
+  return (mean(port.returns)/sqrt(var(port.returns)))
+  
+}
+
+#Define a restrição Long
+
+constraint = function(x) {
+  boundary_constr = (sum(x)-1)**2   # "soma x = 1" restrição
+  
+  for (i in 1:length(x)) {
+    boundary_constr = boundary_constr + 
+      max(c(0,x[i]-1))**2 +  # "x <= 1" restrição
+      max(c(0,-x[i]))**2     # "x >= 0" restrição
+  }
+  
+  return (boundary_constr)
+}
 
