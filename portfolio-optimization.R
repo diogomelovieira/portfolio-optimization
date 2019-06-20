@@ -35,3 +35,17 @@ for (i in 2:ncol(f)) {
 }
 # Remove a primeira linha e a coluna de data
 asset_returns = f[2:nrow(f),2:ncol(f)]
+
+#Define o retorno do portifolio
+portfolio_returns = function(x) {
+  port.returns = 0
+  
+  # Multiplica o inesimo ativo pelo inesimo peso do ativo
+  for (i in 1:length(x)) {
+    port.returns = port.returns + asset_returns[,i] * x[i]
+  }
+  
+  return (port.returns)
+}
+
+
