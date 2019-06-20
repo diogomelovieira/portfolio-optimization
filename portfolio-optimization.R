@@ -71,3 +71,10 @@ constraint = function(x) {
   return (boundary_constr)
 }
 
+#Define o problema de otimização
+
+obj = function(x) {
+  # Para maximizar o Sharpe ratio, nos multiplicamos ele por -1 como um problema de otimização
+  
+  return (-sharpe(x)+100*constraint(x))
+}
